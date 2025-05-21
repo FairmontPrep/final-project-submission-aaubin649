@@ -40,15 +40,13 @@ public class Client {
         visited[row][col] = true;
         path.add("A[" + row + "][" + col + "]");
 
-        // Stop only if we reached a different edge cell than the start
         if (path.size() > 1 && isEdge(row, col, A.length, A[0].length)) {
             if (row != startRow || col != startCol) {
                 return true;
             }
         }
 
-        // Directions: down, right, up, left
-        int[][] directions = { {1,0}, {0,1}, {-1,0}, {0,-1} };
+        int[][] directions = { {1, 0}, {0, 1}, {-1, 0}, {0, -1} };
 
         for (int[] dir : directions) {
             int newRow = row + dir[0];
@@ -63,13 +61,13 @@ public class Client {
     }
 
     public static boolean isEdge(int row, int col, int rows, int cols) {
-        return row == 0 || row == rows -1 || col == 0 || col == cols -1;
+        return row == 0 || row == rows - 1 || col == 0 || col == cols - 1;
     }
 
     public static void printPathMap(ArrayList<String> path, int rows, int cols) {
         String[][] display = new String[rows][cols];
-        for (int i=0; i<rows; i++)
-            for (int j=0; j<cols; j++)
+        for (int i = 0; i < rows; i++)
+            for (int j = 0; j < cols; j++)
                 display[i][j] = " ";
 
         for (String coord : path) {
@@ -79,12 +77,15 @@ public class Client {
             display[r][c] = "1";
         }
 
-        for (int i=0; i<rows; i++) {
+        for (int i = 0; i < rows; i++) {
             System.out.print("[ ");
-            for (int j=0; j<cols; j++) {
-                System.out.print(display[i][j] + " ");
+            for (int j = 0; j < cols; j++) {
+                System.out.print(display[i][j]);
+                if (j < cols - 1) {
+                    System.out.print(", ");
+                }
             }
-            System.out.println("]");
+            System.out.println(" ]");
         }
     }
 }
