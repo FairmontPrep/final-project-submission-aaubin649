@@ -4,11 +4,14 @@ import java.util.Arrays;
 public class Client {
     // Global static input variable
     static ArrayList<ArrayList<Integer>> A = new ArrayList<>(Arrays.asList(
-        new ArrayList<>(Arrays.asList(0, 0, 0, 0, 1)),
-        new ArrayList<>(Arrays.asList(1, 1, 1, 0, 1)),
-        new ArrayList<>(Arrays.asList(0, 0, 1, 1, 1)),
-        new ArrayList<>(Arrays.asList(0, 0, 0, 0, 1)),
-        new ArrayList<>(Arrays.asList(1, 1, 1, 1, 1))
+        new ArrayList<>(Arrays.asList(1, 0, 0, 1, 0, 0, 0, 0)),
+        new ArrayList<>(Arrays.asList(0, 0, 0, 1, 0, 0, 0, 0)),
+        new ArrayList<>(Arrays.asList(0, 0, 0, 1, 0, 0, 1, 0)),
+        new ArrayList<>(Arrays.asList(9, 0, 0, 1, 0, 0, 0, 0)),
+        new ArrayList<>(Arrays.asList(0, 0, 0, 1, 0, 0, 0, 0)),
+        new ArrayList<>(Arrays.asList(0, 0, 0, 1, 0, 0, 0, 0)),
+        new ArrayList<>(Arrays.asList(0, 0, 0, 1, 2, 0, 0, 0)),
+        new ArrayList<>(Arrays.asList(1, 0, 0, 1, 1, 1, 1, 1))
     ));
 
     public static void main(String[] args) {
